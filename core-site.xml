@@ -2,7 +2,7 @@
 
   <property>
     <name>fs.s3a.connection.ssl.enabled</name>
-    <value>false</value>
+    <value>true</value>
   </property>
 
 </configuration>
