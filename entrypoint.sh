@@ -56,9 +56,7 @@ echo "Test date: "$now > testfile
 
 # all -D params must be first, then pass the distcp specific params (like -overwrite)
 hadoop distcp \
-  -Dmapreduce.job.queuename=root \
   -Dfs.s3a.acl.default=BucketOwnerFullControl \
-  -Dmapreduce.task.timeout=60000000 -Dmapreduce.map.tasks=24 \
   -Dfs.s3a.access.key="${accessKey}" -Dfs.s3a.secret.key="${secretKey}" \
   -overwrite \
   testfile s3a://${s3Bucket}
